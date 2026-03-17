@@ -14,10 +14,25 @@ import { toast } from "react-toastify";
 const Contact = () => {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data, e) => {
-    console.log(data);
-    toast.success("Message sent Successfully");
-    e.target.reset();
+  const onSubmit = async (data, e) => {
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwmj6lF-j8HxXDxRVozoijgJzPpcSrN6-TNet3MmZ-KbCLDlPXgfoTEcDQtRn3uuFA0/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        },
+      );
+
+      const result = await response.json();
+
+      if (result.status === "success") {
+        toast.success("Message sent successfully 🚀");
+        e.target.reset();
+      }
+    } catch (error) {
+      toast.error("Something went wrong ❌");
+    }
   };
 
   useEffect(() => {
@@ -55,9 +70,7 @@ const Contact = () => {
               <h2 className="lg:text-xl text-[#7A6960] font-semibold">
                 Address
               </h2>
-              <p className="text-sm text-slate-800">
-                A108 Adam Street, New York, NY 535022
-              </p>
+              <p className="text-sm text-slate-800">jaunpur, Up</p>
             </div>
           </div>
 
@@ -72,7 +85,8 @@ const Contact = () => {
               <h2 className="lg:text-xl text-[#7A6960] font-semibold">
                 Call Us
               </h2>
-              <p className="text-sm text-slate-800">+1 5589 55488 55</p>
+              <p className="text-sm text-slate-800">+99 7080445746 </p>
+              <p className="text-sm text-slate-800">+99 7068244344 </p>
             </div>
           </div>
 
@@ -87,7 +101,7 @@ const Contact = () => {
               <h2 className="lg:text-xl text-[#7A6960] font-semibold">
                 Email Us
               </h2>
-              <p className="text-sm text-slate-800">info@example.com</p>
+              <p className="text-sm text-slate-800">cybsfer@gmail.com</p>
             </div>
           </div>
 
@@ -95,9 +109,8 @@ const Contact = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14010.76256980872!2d77.22260515427726!3d28.60905606083753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2db961be393%3A0xf6c7ef5ee6dd10ae!2sIndia%20Gate%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1717776828829!5m2!1sen!2sin"
+              src="https://www.google.com/maps?q=Jasies%20Chauraha%20Jaunpur&output=embed"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
@@ -117,7 +130,7 @@ const Contact = () => {
                     {...register("name", { required: true })}
                     type="text"
                     id="name"
-                    placeholder="John Doe"
+                    placeholder="Anurag"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
                 </div>
@@ -130,7 +143,7 @@ const Contact = () => {
                     {...register("email", { required: true })}
                     type="email"
                     id="email"
-                    placeholder="johndoe@gmail.com"
+                    placeholder="anurag@gmail.com"
                     className="w-full h-10 px-3 my-3 rounded border border-zinc-300 focus:border focus:border-orange-600 outline-none"
                   />
                 </div>

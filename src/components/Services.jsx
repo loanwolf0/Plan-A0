@@ -12,63 +12,69 @@ const Services = () => {
 
   useEffect(() => {
     AOS.init();
-  });
+  }, []);
 
-  // const clickHandler = () => {
-  //   navigate("app-development");
-  // };
   return (
     <div className="text-[#7A6960]">
+      {/* Heading */}
       <h1 data-aos="fade-down" className="text-3xl font-semibold text-center">
-        Services
+        Digital Marketing Services
       </h1>
+
       <div className="flex justify-center items-center mt-2">
         <div className="bg-orange-600 h-1 w-16 rounded"></div>
       </div>
+
+      {/* Subheading */}
       <p className="text-gray-700 text-center mt-7 mb-10 text-lg">
-        Choose from live online courses, classroom training, or self-paced
-        online programs.
+        हम आपके business के लिए ज्यादा leads, traffic और sales लेकर आते हैं।
       </p>
+
+      {/* Cards */}
       <div
         className="flex flex-col lg:flex-row items-center gap-5"
         data-aos="fade-up"
       >
-        <div onClick={() => navigate("/app-development")}>
+        {/* SEO */}
+        <div>
           <Card
             img={<HiOutlineChartPie />}
-            title={"Apps Development"}
+            title={"SEO (Google Ranking)"}
             desc={
-              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+              "आपकी वेबसाइट को Google के top पर लाकर organic traffic बढ़ाते हैं।"
             }
           />
         </div>
 
-        <div onClick={() => navigate("/web-development")}>
+        {/* Social Media */}
+        <div>
           <Card
             img={<HiOutlineChartPie />}
-            title={"Web Development"}
+            title={"Social Media Marketing"}
             desc={
-              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+              "Instagram और Facebook पर आपका brand grow करके audience बनाते हैं।"
             }
           />
         </div>
 
-        <div onClick={() => navigate("/seo-optimization")}>
+        {/* Ads */}
+        <div>
           <Card
             img={<HiOutlineChartPie />}
-            title={"Search Engine Optimization"}
+            title={"Paid Ads (Google & Meta)"}
             desc={
-              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+              "High-converting ads चलाकर targeted leads और sales दिलाते हैं।"
             }
           />
         </div>
 
-        <div onClick={() => navigate("/campagin-creation")}>
+        {/* Lead Generation */}
+        <div>
           <Card
             img={<HiOutlineChartPie />}
-            title={"Campaign Creation"}
+            title={"Lead Generation"}
             desc={
-              "Lorem ipsum, dolor Adipisci ipsam placeat voluptatum fuga omnis tenetur facere!"
+              "आपके business के लिए real customers generate करते हैं जो convert होते हैं।"
             }
           />
         </div>

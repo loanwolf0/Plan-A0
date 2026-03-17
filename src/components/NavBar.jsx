@@ -18,7 +18,7 @@ const NavBar = () => {
         href="/Marketing-Website/"
         className="lg:text-3xl text-2xl tracking-wide font-light text-[#7A6960]"
       >
-        BrandName
+        CYBRSFER
       </a>
       {/* menu */}
       <div className="lg:flex items-center justify-between lg:gap-14 hidden">
@@ -40,12 +40,12 @@ const NavBar = () => {
         >
           Services
         </a>
-        <a
+        {/* <a
           href="/Marketing-Website/#portfolio"
           className="text-gray-800 hover:text-[#EE7540] text-lg tracking-wide font-light"
         >
           Portfolio
-        </a>
+        </a> */}
 
         <a
           href="/Marketing-Website/#contact"

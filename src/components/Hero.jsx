@@ -51,16 +51,17 @@ const Hero = () => {
         className="lg:w-1/2 w-full md:w-3/4 px-10 md:p-0"
       >
         <h1 className="text-[#7A6960] md:text-5xl text-3xl font-semibold">
-          Fueling Skills, Igniting Careers
+          Grow Your Business with Result-Driven Digital Marketing
         </h1>
+
         <p className="text-xl mt-5 text-gray-600 primary-font">
-          Master industry-relevant skills with our vernacular online courses.
-          Choose your program, get certified, & open doors to lucrative career
-          opportunities.
+          हम आपकी business growth को accelerate करते हैं — SEO, Social Media,
+          Paid Ads और Branding के साथ। ज्यादा leads, ज्यादा sales, और real
+          results।
         </p>
         <div className="flex flex-col sm:flex-row items-center mb-12 lg:mb-0 lg:flex-row gap-10 mt-10">
           <a href="#contact" className="">
-            <CtaButton name={"Get Started"} />
+            <CtaButton name={"Get Free Consultation"} />
           </a>
           {/* <div
             onClick={() => videoStartHandler()}

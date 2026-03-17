@@ -11,13 +11,17 @@ const Seo = () => {
       <div className="secondary-font">
         <NavBar />
       </div>
+
       <Template
-        title={"SEO Optimization"}
+        title={"SEO Services (Google Ranking)"}
         desc={
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet necessitatibus laborum voluptatem at provident atque labore porro ipsam debitis quam, ad dolorem, corrupti aut praesentium minima sit deserunt maiores fuga?"
+          "हम आपकी वेबसाइट को Google के top पर लाने में मदद करते हैं ताकि आपको लगातार organic traffic और real customers मिलें। सही keywords, on-page SEO और content optimization के साथ हम आपके business की online visibility बढ़ाते हैं।"
         }
         image={image}
       />
+
+      <Newsletter />
+      <Footer />
     </div>
   );
 };
